@@ -35,7 +35,31 @@ Modulo de contro del personal para el area de enfermeria de la empresa Halcon.
   * Exportar base de datos
 * Salir
 
+## ScreenShots
 
+### Login
+![Screenshot](screenshots/login.png)
+
+## home
+![Screenshot](screenshots/home.png)
+
+## Alta de expendiente
+![Screenshot](screenshots/altaexpediente.png)
+
+## Buscador
+![Screenshot](screenshots/buscador.png)
+
+## Expediente
+![Screenshot](screenshots/expediente.png)
+
+## Reporte PDF
+![Screenshot](screenshots/reporte.png)
+
+## Dashboard
+![Screenshot](screenshots/dashboard.png)
+
+## Ajustes
+![Screenshot](screenshots/ajustes.png)
 
 ## License
 
