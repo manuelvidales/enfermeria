@@ -23,8 +23,8 @@ DROP TABLE IF EXISTS `archivo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `archivo` (
-  `id_archivo` bigint(255) NOT NULL AUTO_INCREMENT,
-  `id_paciente` bigint(255) NOT NULL,
+  `id_archivo` bigint(191) NOT NULL AUTO_INCREMENT,
+  `id_paciente` bigint(191) NOT NULL,
   `fecha_arc` date NOT NULL,
   `nom_arc` text COLLATE utf8mb4_spanish_ci NOT NULL,
   `tipo_arc` text COLLATE utf8mb4_spanish_ci NOT NULL,
@@ -57,8 +57,8 @@ DROP TABLE IF EXISTS `consulta`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `consulta` (
-  `id_consulta` bigint(255) NOT NULL AUTO_INCREMENT,
-  `id_paciente` bigint(255) NOT NULL,
+  `id_consulta` bigint(191) NOT NULL AUTO_INCREMENT,
+  `id_paciente` bigint(191) NOT NULL,
   `fecha_cons` date NOT NULL,
   `no_cons` int(11) NOT NULL,
   `edad_cons` text COLLATE utf8mb4_spanish_ci NOT NULL,
@@ -192,7 +192,7 @@ DROP TABLE IF EXISTS `paciente`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `paciente` (
-  `id_paciente` bigint(255) NOT NULL AUTO_INCREMENT,
+  `id_paciente` bigint(191) NOT NULL AUTO_INCREMENT,
   `fecha_reg` text COLLATE utf8mb4_spanish_ci NOT NULL,
   `nombre_emp` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `sex_paci` text COLLATE utf8mb4_spanish_ci NOT NULL,
@@ -415,7 +415,7 @@ DROP TABLE IF EXISTS `usuario`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `usuario` (
-  `id_usuario` bigint(255) NOT NULL AUTO_INCREMENT,
+  `id_usuario` bigint(191) NOT NULL AUTO_INCREMENT,
   `tipo_usu` text COLLATE utf8mb4_spanish_ci NOT NULL,
   `nom_usu` text COLLATE utf8mb4_spanish_ci NOT NULL,
   `con_usu` text COLLATE utf8mb4_spanish_ci NOT NULL,
