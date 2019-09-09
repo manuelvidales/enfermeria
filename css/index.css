@@ -1,0 +1,321 @@
+/*::-webkit-scrollbar {
+    width: 20px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}*/	
+html,body{ 
+  background: url(../img/background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: black;
+  margin:0px;
+  height:100%;
+  -webkit-scrollbar-face-color: #1B86CE;
+}
+h2{
+	color:  #1B86CE;
+}
+h5{
+	color:  #1B86CE;
+	font-size: 18px;
+	text-align: left;
+}
+h6{
+	color:  #585858;
+	font-size: 14px;
+	text-align: right;
+}
+a{
+	font-size: 18px;
+}
+td{
+	font-size: 18px;
+	color:  #1B86CE;
+	font-weight: bold;
+}
+th{
+	font-size: 14px;
+	color:  #DF7401;
+	font-weight: bold;
+}
+.login{
+/*	background: url(../img/background_login.png) no-repeat center center fixed; */
+	background-color: green;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+/*  background-color: black;*/
+  margin:0px;
+  height:100%;
+	width:100%;
+	height: 250px;
+/*	background-color: black;*/
+	padding: 15px;
+}
+.menu{
+	position:absolute;
+	top:0;
+	left:0;
+	background-color: #D8D8D8;
+	width:15%;
+ 	height: 100%;
+ 	padding: 15px;
+ 	opacity: 0.9;
+}
+.item-menu{
+	cursor: pointer;
+	text-decoration: underline;
+}
+.item-menu:hover{
+	color:#5DADE2 ;
+
+}
+.buzon{
+	position:absolute;
+	top:0;
+	right:0;
+	background-color: #D8D8D8;
+	width:15%;
+ 	height: 100%;
+ 	padding: 5px;
+ 	opacity: 0.9;
+ 	font-size: 14px;
+}
+.item-box{
+	width: 100%;
+	height: 85%;
+	overflow: scroll;
+    overflow-x:hidden;
+}
+.cross-item-buzon{
+	float:right;
+	color:#E5E7E9;
+	cursor:pointer;
+}
+.item-buzon{
+	cursor: pointer;
+	padding: 5px;
+}
+.item-buzon:hover{
+	color:blue;
+	background-color:#F8F9F9;
+}
+.buscador{
+	position:absolute;
+	top: 0;
+	left: 15%;
+	background-color: white;
+	width: 70%;
+	height: 15%;
+	padding: 10px;
+	background-color: #D8D8D8;
+}
+
+.buscador input::placeholder{
+	color: #6E6E6E;
+/*	font-weight: bold; */
+	font-size: 16px;
+}
+.contenedor{
+	position:absolute;
+	top: 98px;
+	left: 15%;
+	background-color: white;
+	width: 70%;
+	height: 85%;
+	opacity: 0.9;
+	overflow: scroll;
+    overflow-x:hidden; 
+    padding: 10px;
+    -webkit-scrollbar-face-color: #1B86CE;
+}
+.contenedor2{
+	position:absolute;
+	top: 0px;
+	left: 10%;
+	background-color: white;
+	width: 80%;
+	height: 100%;
+	opacity: 0.9;
+	overflow: hidden;
+    overflow-x:hidden; 
+    padding: 0px;
+    -webkit-scrollbar-face-color: #1B86CE;
+}
+.busqueda{
+	position:absolute;
+	top: 81px;
+	left: 22%;
+	background-color: #D8D8D8; /*white;*/
+	width: 56%;
+	opacity: 0.9;
+    padding: 5px;
+    display: none;
+}
+.item-busqueda{
+	padding: 5px;
+	cursor: pointer;
+}
+.item-busqueda:hover{
+	background-color: #58ACFA; /*#00FF40;*/
+}
+.expediente,.info_gral,.consultas,.archivos,.ajustes{
+	width: 100%;
+	padding: 20px;
+	background-color: white;
+	text-align: left;
+}
+
+		.backdrop
+		{
+			position:absolute;
+			top:0px;
+			left:0px;
+			width:100%;
+			height:100%;
+			background:#000;
+			opacity: .0;
+			filter:alpha(opacity=0);
+			z-index:50;
+			display:none;
+		}
+ 
+ 
+		.box
+		{
+			position:absolute;
+			top:20%;
+			left:30%;
+			width:500px;
+			height:350px;
+			background:#ffffff;
+			z-index:51;
+			padding:10px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			-moz-box-shadow:0px 0px 5px #444444;
+			-webkit-box-shadow:0px 0px 5px #444444;
+			box-shadow:0px 0px 5px #444444;
+			display:none;
+		}
+ 
+		.close
+		{
+			float:right;
+			margin-right:6px;
+			cursor:pointer;
+		}
+
+.form-login {
+  display: block;
+  width: 40%;
+  height: calc(2.65rem + 7px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.35rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-buscador {
+  display: block;
+  width: 80%;
+  height: calc(2.25rem + 6px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.35rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-buscador2 {
+  display: block;
+  width: 60%;
+  height: calc(2.25rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control2 {
+  display: block;
+  height: calc(2.25rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+.form_control {
+/*  display: block;*/
+  width: 50%;
+  height: calc(2.25rem + 2px);
+  padding: 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+/*  background-clip: padding-box; */
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+.texto-colorfondo
+{
+	text-align: center;
+	color: #0000FF;
+	background-color: #a6aeab;
+
+}
+.item-subtitle
+{
+	text-align: right;
+	color: #0000FF;
+
+}
+
+/*Inicia Texto en movimiento*/
+#movetxt 
+{
+    position: absolute;
+    -webkit-animation: moving 3s infinite;
+    animation: moving 3s infinite;
+    color:#e652b7;
+}
+		
+@-webkit-keyframes moving {
+    from {left: 100px;}
+    to {left: 1px;}
+}
+
+@keyframes moving {
+    from {left: 1px;}
+    to {left: 100px;}
+}
+/*termina text en movimiento*/
