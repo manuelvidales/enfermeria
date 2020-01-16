@@ -177,7 +177,7 @@ function buscarExpediente()
 {
 	include "conexion.php";
 	$con = new Conexion();
-	$sql = "SELECT * FROM paciente WHERE nombre_emp  LIKE '%$_POST[value]%' ";
+	$sql = "SELECT * FROM paciente WHERE nombre_emp  LIKE '%$_POST[value]%' AND edo_exp = 'Activo'";
 	$datos=$con->select($sql);
 	$contador=0;
 	while ($fila=mysqli_fetch_array($datos))
