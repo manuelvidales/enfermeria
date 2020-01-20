@@ -12,7 +12,7 @@ $(function(){
       	console.log(json.msg);
       }else{
       	swal({
-      	  html:false,	
+      	  html:false,
 		  title: "Aviso",
 		  text: json.msg,
 		  showCancelButton: true,
@@ -48,9 +48,14 @@ $(function(){
 <tr>
 <td colspan="1">
 <label>Nombre Empleado</label>
-<select name="nombre_emp" class="form-control" id="cbo_nom_emp_nuevo" required>
+
+<select name="" class="form-control" id="seleccionando" onchange="ShowSelected();" required>
   <?php include "options_empleados.php"; ?>
-</select></td>
+
+</select>
+
+</td>
+
 <td colspan="1">
 <label>No. Seguro Social</label>
 <input type="text"  name="imss" class="form-control" placeholder="NSS" required>
@@ -59,7 +64,14 @@ $(function(){
 <label>Grupo y RH</label>
 <input type="text"  name="tipo_sangre" class="form-control" placeholder="tipo de sangre" required>
 </td>
+
+<td colspan="1">
+<input type="text"  name="no_emp" id="no_emp">
+<input type="text"  name="nombre_emp" id="nombre">
+</td>
+
 </tr>
+
 
 <tr>
 <td colspan="1">
@@ -76,6 +88,7 @@ $(function(){
 <label>Edad</label>
 <input type="number" name="edad_paci" id="txt_edad_generar" class="form-control" placeholder="Calculo automatico">
 </td>
+
 </tr>
 <tr><td colspan="4"><h6>**Si el campo edad se encuentra vacio, el sistema calculará la edad automáticamente...</h6></td></tr>
 <tr>
@@ -171,4 +184,15 @@ $(function(){
         $(document).ready(function(){
           $('select').material_select();
         });
+    </script>
+
+    <script language="javascript">
+    function ShowSelected()
+        {
+        var select=document.getElementById("seleccionando");
+        var displayid=select.options[select.selectedIndex].value;
+        var displaytext=select.options[select.selectedIndex].text;
+        document.getElementById("no_emp").value=displayid;
+        document.getElementById("nombre").value=displaytext;
+        }
     </script>

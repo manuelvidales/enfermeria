@@ -17,7 +17,7 @@ class Conexion
 {
 	public $host = "localhost";
 	public $user = "root";
-	public $pass = "";
+	public $pass = "password";
 	public $base = "enfermeria";
 function getConexion(){
 	return NEW mysqli($this->host,$this->user,$this->pass);

@@ -177,7 +177,7 @@ function buscarExpediente()
 {
 	include "conexion.php";
 	$con = new Conexion();
-	$sql = "SELECT * FROM paciente WHERE nombre_emp  LIKE '%$_POST[value]%' AND edo_exp = 'Activo'";
+	$sql = "SELECT * FROM paciente WHERE nombre_emp  LIKE '%$_POST[value]%'";
 	$datos=$con->select($sql);
 	$contador=0;
 	while ($fila=mysqli_fetch_array($datos))
@@ -294,6 +294,7 @@ function Expedientenuevo()
 	}
 	$sql="INSERT INTO paciente (
 		fecha_reg,
+		no_emp,
 		nombre_emp,
 		imss,
 		tipo_sangre,
@@ -316,7 +317,8 @@ function Expedientenuevo()
 		tel_cont,
 		edo_exp) VALUES (
 		'$_POST[fecha_reg]',
-		'".$_POST['nombre_emp']."',
+		'$_POST[no_emp]',
+		'$_POST[nombre_emp]',
 		'$_POST[imss]',
 		'$_POST[tipo_sangre]',
 		'$_POST[sex_paci]',
