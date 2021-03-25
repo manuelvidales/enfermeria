@@ -17,24 +17,39 @@ if(isset($_SESSION['tipo_usu']))
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
-	<div class="contenedor2" id="contenedor" style="background-color:white;">
-		<center>
+	<div class="contenedor2 text-center" id="contenedor" style="background-color:white;">
+		
 		</br></br></br>
-			<img src="img/logo_halcon.png" style="width:25%;height:30%; text-align:center;">
-			<img src="img/falconright.png" style="width:20%;height:15%; text-align:center;">		
+		<img src="img/logo_halcon.png" style="width:25%;height:25%;">
+		<img src="img/falconright.png" style="width:20%;height:25%;">		
 		</br></br>
-			<img src="img/enfemeria_login.png" style="width:75%;height:50%; text-align:center;">
-			</br>
-			<div class="login">
-				<form id="form_login" class="form" method="POST">
-					<input type="text" name="usuario" class="form-login" placeholder="Ingrese su Usuario" required>
-					</br>
-					<input type="password" name="contrasena" class="form-login" placeholder="Ingrese su Contraseña" required>
-					<br>
-					<input type="submit" class="btn btn-primary" style="width:40%;" value="Iniciar sesión">
-				</form>
-			</div>
-		</center>
+		<img src="img/enfemeria_login.png" style="width:75%;height:25%;">
+		</br>
+
+		<div class="login">
+			<form id="form_login" class="form-group" method="POST">
+				<div class="form-group">
+					<div class="col-md-offset-4 col-md-4">
+						<input type="text" name="usuario" class="form-control " placeholder="Ingrese su Usuario" required>
+					</div>
+					<br><br>
+				</div>
+				
+				<div class="form-group">
+					<div class="col-md-offset-4 col-md-4">
+						<input type="password" name="contrasena" class="form-control " placeholder="Ingrese su Contraseña" required>
+					</div>
+					<br><br>
+				</div>
+				
+				<div class="form-group">
+					<div class=" col-md-offset-4 col-md-4">
+						<input type="submit" class="btn btn-primary btn-block"  value="Iniciar sesión">
+					</div>
+					<div class="col-md-5"></div>
+				</div>
+			</form>
+		</div>
 	</div>
 </body>
 <script type="text/javascript" src="js/jquery.js"></script>
